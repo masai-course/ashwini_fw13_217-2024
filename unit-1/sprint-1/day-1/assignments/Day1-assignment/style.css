@@ -1,0 +1,109 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.large-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s;
+}
+
+.small-circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    transition: transform 1s, width 1s, height 1s, background-color 1s;
+}
+
+.paid-text {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+
+.large-circle:hover {
+    background-color: #2c3e50;
+}
+
+.large-circle:hover .small-circle {
+    width: 30px;
+    height: 30px;
+}
+
+.large-circle:hover #circle1 {
+    transform: translate(-160px, -160px);
+    background-color: #1abc9c;
+    transition-duration: 1.5s;
+}
+
+.large-circle:hover #circle2 {
+    transform: translate(160px, -160px);
+    background-color: #2ecc71;
+    transition-duration: 1.7s;
+}
+
+.large-circle:hover #circle3 {
+    transform: translate(-160px, 160px);
+    background-color: #3498db;
+    transition-duration: 1.9s;
+}
+
+.large-circle:hover #circle4 {
+    transform: translate(160px, 160px);
+    background-color: #9b59b6;
+    transition-duration: 2.1s;
+}
+
+.large-circle:hover #circle5 {
+    transform: translate(0, -200px);
+    background-color: #f1c40f;
+    transition-duration: 1.3s;
+}
+
+.large-circle:hover #circle6 {
+    transform: translate(200px, 0);
+    background-color: #e67e22;
+    transition-duration: 1.5s;
+}
+
+.large-circle:hover #circle7 {
+    transform: translate(0, 200px);
+    background-color: #e74c3c;
+    transition-duration: 1.7s;
+}
+
+.large-circle:hover #circle8 {
+    transform: translate(-200px, 0);
+    background-color: #612eed;
+    transition-duration: 1.9s;
+}
+
+.large-circle:hover .paid-text {
+    display: block;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
